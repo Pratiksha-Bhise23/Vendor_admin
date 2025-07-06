@@ -67,8 +67,8 @@ export const CreateUser = () => {
     try {
       const token = localStorage.getItem("token");
       const url = editingUserId
-        ? `http://localhost:5000/api/auth/update-vendor/${editingUserId}`
-        : "http://localhost:5000/api/auth/addVendor";
+        ? `https://vendor-admin-p2ls.onrender.com/api/auth/update-vendor/${editingUserId}`
+        : "https://vendor-admin-p2ls.onrender.com/api/auth/addVendor";
 
       const method = editingUserId ? "PUT" : "POST";
       const requestData = { ...formData };

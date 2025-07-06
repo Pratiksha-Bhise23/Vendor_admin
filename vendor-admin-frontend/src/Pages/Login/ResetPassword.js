@@ -29,7 +29,7 @@
 //     setError("");
 //     setLoading(true);
 //     try {
-//       const response = await axios.post("http://localhost:5000/api/admin/resetpassword", {
+//       const response = await axios.post("https://vendor-admin-p2ls.onrender.com/api/admin/resetpassword", {
 //         email,
 //         otp,
 //         new_password: newPassword,
