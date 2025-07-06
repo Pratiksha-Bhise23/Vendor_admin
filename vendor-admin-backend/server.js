@@ -1,7 +1,7 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const authRoutes = require('./routes/authRoutes');
+const express = require("express");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const authRoutes = require("./routes/authRoutes");
 
 dotenv.config();
 const app = express();
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = ["http://127.0.0.1:3000", "http://localhost:3000"]; // Allow both localhost and 127.0.0.1
+      const allowedOrigins = ["multiflyvendoradmin.netlify.app"]; // Allow both localhost and 127.0.0.1
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -39,8 +39,7 @@ app.use(
   })
 );
 
-
-app.use('/api/auth', authRoutes);
+app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
